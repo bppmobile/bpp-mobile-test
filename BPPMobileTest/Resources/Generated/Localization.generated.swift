@@ -13,6 +13,8 @@ enum Localization {
   static let loginEmailTextfieldPlaceholder = Localization.tr("Localizable", "login_email_textfield_placeholder")
   /// E-mail e/ou senha inválidos
   static let loginErrorInvalidEmailOrPasswordMessage = Localization.tr("Localizable", "login_error_invalid_email_or_password_message")
+  /// E-mail em formato inválido
+  static let loginErrorInvalidFormattedEmail = Localization.tr("Localizable", "login_error_invalid_formatted_email")
   /// Senha
   static let loginPasswordTextfieldPlaceholder = Localization.tr("Localizable", "login_password_textfield_placeholder")
 }

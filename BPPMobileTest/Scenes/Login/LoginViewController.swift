@@ -47,6 +47,10 @@ final class LoginViewController: UIViewController, HasViewState {
         return dependencies.colorTheme
     }
     
+    private var emailValidator: EmailValidator {
+        return dependencies.emailValidator
+    }
+    
     private let cornerRadius: CGFloat = 8
     
     // MARK: Private methods
@@ -68,8 +72,12 @@ final class LoginViewController: UIViewController, HasViewState {
     }
     
     private func observeNotifications() {
-        NotificationCenter.default
-            .addObserver(self, selector: #selector(textFieldDidChange), name: Notification.Name.UITextFieldTextDidChange, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(textFieldDidChange),
+            name: Notification.Name.UITextFieldTextDidChange,
+            object: nil
+        )
     }
     
     // MARK: IBActions
@@ -79,18 +87,23 @@ final class LoginViewController: UIViewController, HasViewState {
     }
     
     private func attemptToLogUserIn() {
-        if areBothFieldsFilledIn() {
+        if areBothFieldsValid() {
             viewState = .isLoading
         }
     }
     
-    private func areBothFieldsFilledIn() -> Bool {
-        if let email = emailTextField.text?.trimmingCharacters(in: CharacterSet.whitespaces), !email.isEmpty,
-            let password = passwordTextField.text, !password.isEmpty {
-            return true
+    private func areBothFieldsValid() -> Bool {
+        guard let email = emailTextField.text, emailValidator.isEmailValid(email) else {
+            let error = LoginError.invalidFormattedEmail
+            viewState = .hasError(error)
+            return false
         }
         
-        return false
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            return false
+        }
+        
+        return true
     }
 }
 
@@ -106,6 +119,7 @@ private extension LoginViewController {
             
         case .isLoading:
             loginButton.viewState = .isLoading
+            errorMessageView.fadeOut()
             showNetworkActivityIndicator()
             
         case .hasError(let error):
@@ -135,5 +149,14 @@ extension LoginViewController: UITextFieldDelegate {
     
     @objc private func textFieldDidChange() {
         loginButton.isEnabled = areBothFieldsFilledIn()
+    }
+    
+    private func areBothFieldsFilledIn() -> Bool {
+        if let email = emailTextField.text, !email.isEmpty,
+            let password = passwordTextField.text, !password.isEmpty {
+            return true
+        }
+        
+        return false
     }
 }

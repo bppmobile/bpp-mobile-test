@@ -10,7 +10,6 @@
 		08A441BD2065D09E0092950C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441BC2065D09E0092950C /* AppDelegate.swift */; };
 		08A441C42065D09E0092950C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08A441C32065D09E0092950C /* Assets.xcassets */; };
 		08A441C72065D09E0092950C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08A441C52065D09E0092950C /* LaunchScreen.storyboard */; };
-		08A441D22065D09E0092950C /* BPPMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441D12065D09E0092950C /* BPPMobileTestTests.swift */; };
 		08A441DD2065D09E0092950C /* BPPMobileTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441DC2065D09E0092950C /* BPPMobileTestUITests.swift */; };
 		08A441F42065D81A0092950C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441F22065D81A0092950C /* LoginViewController.swift */; };
 		08A441F52065D81A0092950C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A441F32065D81A0092950C /* LoginViewController.xib */; };
@@ -30,6 +29,8 @@
 		08CA10F02066D5DE00E72F94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08CA10F22066D5DE00E72F94 /* Localizable.strings */; };
 		08CA10F52066D70100E72F94 /* Localization.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10F42066D70100E72F94 /* Localization.generated.swift */; };
 		08CA10F72066DBAB00E72F94 /* RoundedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10F62066DBAB00E72F94 /* RoundedButtonTests.swift */; };
+		08CA10F92066E24600E72F94 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10F82066E24600E72F94 /* EmailValidator.swift */; };
+		08CA10FE2066E68B00E72F94 /* EmailValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10FD2066E68B00E72F94 /* EmailValidatorTests.swift */; };
 		3F29B5C958D1E11AED341CFF /* Pods_BPPMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4404DA452AD925423895FA4B /* Pods_BPPMobileTestTests.framework */; };
 		81B96C3771F1DA4E506A1E5E /* Pods_BPPMobileTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF6CAF66A4EE325374C4F59 /* Pods_BPPMobileTestUITests.framework */; };
 		BE84642C6BE762EAA5127442 /* Pods_BPPMobileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F5EF289AE93B3DDF390254 /* Pods_BPPMobileTest.framework */; };
@@ -60,7 +61,6 @@
 		08A441C62065D09E0092950C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08A441C82065D09E0092950C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A441CD2065D09E0092950C /* BPPMobileTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPPMobileTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		08A441D12065D09E0092950C /* BPPMobileTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPPMobileTestTests.swift; sourceTree = "<group>"; };
 		08A441D32065D09E0092950C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A441D82065D09E0092950C /* BPPMobileTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPPMobileTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A441DC2065D09E0092950C /* BPPMobileTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPPMobileTestUITests.swift; sourceTree = "<group>"; };
@@ -85,6 +85,8 @@
 		08CA10F32066D68300E72F94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		08CA10F42066D70100E72F94 /* Localization.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.generated.swift; sourceTree = "<group>"; };
 		08CA10F62066DBAB00E72F94 /* RoundedButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonTests.swift; sourceTree = "<group>"; };
+		08CA10F82066E24600E72F94 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		08CA10FD2066E68B00E72F94 /* EmailValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorTests.swift; sourceTree = "<group>"; };
 		14F5EF289AE93B3DDF390254 /* Pods_BPPMobileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BPPMobileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBF3AAC8677F92701E0DB12 /* Pods-BPPMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPPMobileTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BPPMobileTestTests/Pods-BPPMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3ADBDF6DD7690CEBBEC2D8B8 /* Pods-BPPMobileTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPPMobileTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BPPMobileTest/Pods-BPPMobileTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,8 +162,8 @@
 		08A441D02065D09E0092950C /* BPPMobileTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				08A441D12065D09E0092950C /* BPPMobileTestTests.swift */,
 				08CA10F62066DBAB00E72F94 /* RoundedButtonTests.swift */,
+				08CA10FD2066E68B00E72F94 /* EmailValidatorTests.swift */,
 				08A441D32065D09E0092950C /* Info.plist */,
 			);
 			path = BPPMobileTestTests;
@@ -243,6 +245,7 @@
 		08A441FA2065DB020092950C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				08CA10FA2066E24900E72F94 /* Validators */,
 				08CA10C72066894000E72F94 /* Views */,
 				08CA10E82066CC9100E72F94 /* LoginDependencies.swift */,
 				08CA10EA2066D3AD00E72F94 /* LoginError.swift */,
@@ -302,6 +305,14 @@
 				08CA10F22066D5DE00E72F94 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		08CA10FA2066E24900E72F94 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				08CA10F82066E24600E72F94 /* EmailValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		187BA3DDD51F9034C1C768E4 /* Pods */ = {
@@ -665,6 +676,7 @@
 				08CA10DF20669EA800E72F94 /* ViewState.swift in Sources */,
 				08CA10F52066D70100E72F94 /* Localization.generated.swift in Sources */,
 				08A441F42065D81A0092950C /* LoginViewController.swift in Sources */,
+				08CA10F92066E24600E72F94 /* EmailValidator.swift in Sources */,
 				08A441BD2065D09E0092950C /* AppDelegate.swift in Sources */,
 				08CA10DB20669CBF00E72F94 /* Assets.generated.swift in Sources */,
 			);
@@ -674,8 +686,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A441D22065D09E0092950C /* BPPMobileTestTests.swift in Sources */,
 				08CA10F72066DBAB00E72F94 /* RoundedButtonTests.swift in Sources */,
+				08CA10FE2066E68B00E72F94 /* EmailValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

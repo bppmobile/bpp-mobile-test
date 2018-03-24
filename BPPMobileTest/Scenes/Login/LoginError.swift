@@ -1,11 +1,15 @@
 import Foundation
 
 enum LoginError: Error {
-    case emailOrPasswordInvalid
+    case invalidFormattedEmail
+    case invalidEmailOrPassword
     
     var localizedDescription: String {
         switch self {
-        case .emailOrPasswordInvalid:
+        case .invalidFormattedEmail:
+            return Localization.loginErrorInvalidFormattedEmail
+            
+        case .invalidEmailOrPassword:
             return Localization.loginErrorInvalidEmailOrPasswordMessage
         }
     }

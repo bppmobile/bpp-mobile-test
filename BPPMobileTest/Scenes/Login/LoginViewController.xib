@@ -33,7 +33,7 @@
                             <rect key="frame" x="20" y="0.0" width="255" height="49.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="username"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="go" textContentType="username"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="3qJ-SF-RGe"/>
                             </connections>
@@ -49,7 +49,7 @@
                             <rect key="frame" x="20" y="50.5" width="255" height="49.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="j4D-bH-DYd"/>
                             </connections>

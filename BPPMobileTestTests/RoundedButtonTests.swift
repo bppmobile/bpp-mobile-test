@@ -11,11 +11,11 @@ final class RoundedButtonTests: XCTestCase {
         
         button.viewState = .isLoading
         XCTAssertNil(button.title(for: .normal))
-        XCTAssert(button.isUserInteractionEnabled == false)
+        XCTAssertFalse(button.isUserInteractionEnabled)
         
         button.viewState = .idle
         XCTAssert(button.title(for: .normal) == title)
-        XCTAssert(button.isUserInteractionEnabled == true)
+        XCTAssertTrue(button.isUserInteractionEnabled)
     }
     
     func testChangingButtonToLoadingStateThenToErrorState() {
@@ -26,13 +26,13 @@ final class RoundedButtonTests: XCTestCase {
         
         button.viewState = .isLoading
         XCTAssertNil(button.title(for: .normal))
-        XCTAssert(button.isUserInteractionEnabled == false)
+        XCTAssertFalse(button.isUserInteractionEnabled)
         
-        let error = LoginError.emailOrPasswordInvalid
+        let error = LoginError.invalidEmailOrPassword
         
         button.viewState = .hasError(error)
         XCTAssert(button.title(for: .normal) == title)
-        XCTAssert(button.isUserInteractionEnabled == true)
+        XCTAssertTrue(button.isUserInteractionEnabled)
     }
     
     func testChangingButtonToErrorStateThenToLoadingState() {
@@ -41,14 +41,14 @@ final class RoundedButtonTests: XCTestCase {
         let title = "Rounded Button Title"
         button.setTitle(title, for: .normal)
         
-        let error = LoginError.emailOrPasswordInvalid
+        let error = LoginError.invalidEmailOrPassword
         
         button.viewState = .hasError(error)
         XCTAssert(button.title(for: .normal) == title)
-        XCTAssert(button.isUserInteractionEnabled == true)
+        XCTAssertTrue(button.isUserInteractionEnabled)
         
         button.viewState = .isLoading
         XCTAssertNil(button.title(for: .normal))
-        XCTAssert(button.isUserInteractionEnabled == false)
+        XCTAssertFalse(button.isUserInteractionEnabled)
     }
 }
