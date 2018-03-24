@@ -12,6 +12,11 @@
 		08A441C72065D09E0092950C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08A441C52065D09E0092950C /* LaunchScreen.storyboard */; };
 		08A441D22065D09E0092950C /* BPPMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441D12065D09E0092950C /* BPPMobileTestTests.swift */; };
 		08A441DD2065D09E0092950C /* BPPMobileTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441DC2065D09E0092950C /* BPPMobileTestUITests.swift */; };
+		08A441F42065D81A0092950C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441F22065D81A0092950C /* LoginViewController.swift */; };
+		08A441F52065D81A0092950C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A441F32065D81A0092950C /* LoginViewController.xib */; };
+		08A441F92065D8640092950C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441F82065D8640092950C /* AppCoordinator.swift */; };
+		08A441FC2065DB4E0092950C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441FB2065DB4E0092950C /* AppDependencies.swift */; };
+		08A441FE206683BE0092950C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441FD206683BE0092950C /* RoundedButton.swift */; };
 		3F29B5C958D1E11AED341CFF /* Pods_BPPMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4404DA452AD925423895FA4B /* Pods_BPPMobileTestTests.framework */; };
 		81B96C3771F1DA4E506A1E5E /* Pods_BPPMobileTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF6CAF66A4EE325374C4F59 /* Pods_BPPMobileTestUITests.framework */; };
 		BE84642C6BE762EAA5127442 /* Pods_BPPMobileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F5EF289AE93B3DDF390254 /* Pods_BPPMobileTest.framework */; };
@@ -47,6 +52,11 @@
 		08A441D82065D09E0092950C /* BPPMobileTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BPPMobileTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08A441DC2065D09E0092950C /* BPPMobileTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPPMobileTestUITests.swift; sourceTree = "<group>"; };
 		08A441DE2065D09E0092950C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08A441F22065D81A0092950C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		08A441F32065D81A0092950C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		08A441F82065D8640092950C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		08A441FB2065DB4E0092950C /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		08A441FD206683BE0092950C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		14F5EF289AE93B3DDF390254 /* Pods_BPPMobileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BPPMobileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBF3AAC8677F92701E0DB12 /* Pods-BPPMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPPMobileTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BPPMobileTestTests/Pods-BPPMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3ADBDF6DD7690CEBBEC2D8B8 /* Pods-BPPMobileTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPPMobileTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BPPMobileTest/Pods-BPPMobileTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,9 +101,9 @@
 				08A441BB2065D09E0092950C /* BPPMobileTest */,
 				08A441D02065D09E0092950C /* BPPMobileTestTests */,
 				08A441DB2065D09E0092950C /* BPPMobileTestUITests */,
-				08A441BA2065D09E0092950C /* Products */,
-				187BA3DDD51F9034C1C768E4 /* Pods */,
 				A6E8792BE73CEE5BABEF7556 /* Frameworks */,
+				187BA3DDD51F9034C1C768E4 /* Pods */,
+				08A441BA2065D09E0092950C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +122,7 @@
 			children = (
 				08A441EF2065D1E60092950C /* Components */,
 				08A441EA2065D1050092950C /* Resources */,
+				08A441F12065D7FA0092950C /* Scenes */,
 			);
 			path = BPPMobileTest;
 			sourceTree = "<group>";
@@ -171,7 +182,9 @@
 		08A441EE2065D1E00092950C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				08A441F82065D8640092950C /* AppCoordinator.swift */,
 				08A441BC2065D09E0092950C /* AppDelegate.swift */,
+				08A441FB2065DB4E0092950C /* AppDependencies.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -182,6 +195,32 @@
 				08A441EE2065D1E00092950C /* Application */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		08A441F12065D7FA0092950C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				08A441FA2065DB020092950C /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		08A441FA2065DB020092950C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				08CA10C72066894000E72F94 /* Views */,
+				08A441F22065D81A0092950C /* LoginViewController.swift */,
+				08A441F32065D81A0092950C /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		08CA10C72066894000E72F94 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08A441FD206683BE0092950C /* RoundedButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		187BA3DDD51F9034C1C768E4 /* Pods */ = {
@@ -326,6 +365,7 @@
 			files = (
 				08A441C72065D09E0092950C /* LaunchScreen.storyboard in Resources */,
 				08A441C42065D09E0092950C /* Assets.xcassets in Resources */,
+				08A441F52065D81A0092950C /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +554,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A441FC2065DB4E0092950C /* AppDependencies.swift in Sources */,
+				08A441FE206683BE0092950C /* RoundedButton.swift in Sources */,
+				08A441F92065D8640092950C /* AppCoordinator.swift in Sources */,
+				08A441F42065D81A0092950C /* LoginViewController.swift in Sources */,
 				08A441BD2065D09E0092950C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
