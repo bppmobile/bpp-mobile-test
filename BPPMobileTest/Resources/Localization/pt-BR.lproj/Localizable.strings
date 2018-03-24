@@ -1,0 +1,5 @@
+// Login
+"login_email_textfield_placeholder" = "E-mail";
+"login_password_textfield_placeholder" = "Senha";
+"login_button_title" = "Enviar";
+"login_error_invalid_email_or_password_message" = "E-mail e/ou senha inválidos";

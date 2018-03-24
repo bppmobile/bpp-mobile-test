@@ -1,8 +1,12 @@
 import UIKit
 
 struct AppDependencies {
+    
+    let colorTheme: ColorTheme
 
     static func make() -> AppDependencies {
-        return AppDependencies()
+        let colorTheme = LightTheme()
+        
+        return AppDependencies(colorTheme: colorTheme)
     }
 }

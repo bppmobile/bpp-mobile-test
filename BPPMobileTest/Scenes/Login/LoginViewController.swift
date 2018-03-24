@@ -1,6 +1,20 @@
 import UIKit
 
-final class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController, HasViewState {
+    
+    // MARK: HasViewState
+    
+    private(set) var viewState: ViewState = .idle {
+        didSet {
+            didChangeViewState()
+        }
+    }
+    
+    // MARK: Public properties
+    
+    //swiftlint:disable implicitly_unwrapped_optional
+    var dependencies: LoginDependencies!
+    //swiftlint:enable implicitly_unwrapped_optional
     
     // MARK: UIViewController overrides
     
@@ -21,20 +35,36 @@ final class LoginViewController: UIViewController {
     
     // MARK: IBOutlets
 
+    @IBOutlet private weak var errorMessageView: ErrorMessageView!
     @IBOutlet private weak var fieldsContainerView: UIView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var loginButton: RoundedButton!
     
+    // MARK: Private properties
+    
+    private var colorTheme: ColorTheme {
+        return dependencies.colorTheme
+    }
+    
+    private let cornerRadius: CGFloat = 8
+    
     // MARK: Private methods
     
     private func setSubviews() {
+        errorMessageView.colorTheme = colorTheme
+        
+        emailTextField.placeholder = Localization.loginEmailTextfieldPlaceholder
+        passwordTextField.placeholder = Localization.loginPasswordTextfieldPlaceholder
+        
         loginButton.isEnabled = false
+        loginButton.setTitle(Localization.loginButtonTitle, for: .normal)
+        loginButton.colorTheme = colorTheme
     }
     
     private func setAppearance() {
-        fieldsContainerView.layer.cornerRadius = 8
-        view.setLinearGradient(withColors: Colors.background.gradientColors, axis: .vertical)
+        fieldsContainerView.layer.cornerRadius = cornerRadius
+        view.setLinearGradient(withColors: colorTheme.mainBackgroundGradient)
     }
     
     private func observeNotifications() {
@@ -45,46 +75,13 @@ final class LoginViewController: UIViewController {
     // MARK: IBActions
     
     @IBAction private func loginButtonTouchedUpInside(_ sender: RoundedButton) {
-        
-    }
-}
-
-// MARK: UITextFieldDelegate
-
-extension LoginViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if areBothFieldsFilledIn() {
-            print("login")
-        
-        } else {
-            focusOnNextField()
-        }
-        
-        return true
+        attemptToLogUserIn()
     }
     
-    private func focusOnNextField() {
-        if emailTextField.isFirstResponder {
-            passwordTextField.becomeFirstResponder()
-        } else {
-            emailTextField.becomeFirstResponder()
-        }
-    }
-    
-    @objc private func textFieldDidChange() {
+    private func attemptToLogUserIn() {
         if areBothFieldsFilledIn() {
-            loginButton.isEnabled = true
-            emailTextField.returnKeyType = .go
-            passwordTextField.returnKeyType = .go
-        
-        } else {
-            loginButton.isEnabled = false
-            emailTextField.returnKeyType = .next
-            passwordTextField.returnKeyType = .next
+            viewState = .isLoading
         }
-        
-        emailTextField.reloadInputViews()
-        passwordTextField.reloadInputViews()
     }
     
     private func areBothFieldsFilledIn() -> Bool {
@@ -94,5 +91,49 @@ extension LoginViewController: UITextFieldDelegate {
         }
         
         return false
+    }
+}
+
+// MARK: State handling
+
+private extension LoginViewController {
+    private func didChangeViewState() {
+        switch viewState {
+        case .idle:
+            loginButton.viewState = .idle
+            errorMessageView.fadeOut()
+            hideNetworkActivityIndicator()
+            
+        case .isLoading:
+            loginButton.viewState = .isLoading
+            showNetworkActivityIndicator()
+            
+        case .hasError(let error):
+            loginButton.viewState = .hasError(error)
+            errorMessageView.text = error.asLoginError?.localizedDescription
+            errorMessageView.fadeIn()
+            hideNetworkActivityIndicator()
+        }
+    }
+    
+    private func showNetworkActivityIndicator() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    private func hideNetworkActivityIndicator() {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+}
+
+// MARK: UITextFieldDelegate
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        attemptToLogUserIn()
+        return true
+    }
+    
+    @objc private func textFieldDidChange() {
+        loginButton.isEnabled = areBothFieldsFilledIn()
     }
 }

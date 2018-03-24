@@ -18,9 +18,18 @@
 		08A441FC2065DB4E0092950C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441FB2065DB4E0092950C /* AppDependencies.swift */; };
 		08A441FE206683BE0092950C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441FD206683BE0092950C /* RoundedButton.swift */; };
 		08CA10CE2066978100E72F94 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10CD2066978100E72F94 /* UIView+Gradient.swift */; };
-		08CA10D12066986900E72F94 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10D02066986900E72F94 /* Theme.swift */; };
 		08CA10D3206699D300E72F94 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08CA10D2206699D300E72F94 /* Colors.xcassets */; };
 		08CA10DB20669CBF00E72F94 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10DA20669CBF00E72F94 /* Assets.generated.swift */; };
+		08CA10DF20669EA800E72F94 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10DE20669EA800E72F94 /* ViewState.swift */; };
+		08CA10E12066BE6A00E72F94 /* ErrorMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10E02066BE6A00E72F94 /* ErrorMessageView.swift */; };
+		08CA10E32066C4E300E72F94 /* UIView+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10E22066C4E300E72F94 /* UIView+Shadows.swift */; };
+		08CA10E52066C61500E72F94 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10E42066C61500E72F94 /* UIView+Constraints.swift */; };
+		08CA10E72066C9D000E72F94 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10E62066C9D000E72F94 /* Colors.swift */; };
+		08CA10E92066CC9100E72F94 /* LoginDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10E82066CC9100E72F94 /* LoginDependencies.swift */; };
+		08CA10EB2066D3AD00E72F94 /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10EA2066D3AD00E72F94 /* LoginError.swift */; };
+		08CA10F02066D5DE00E72F94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08CA10F22066D5DE00E72F94 /* Localizable.strings */; };
+		08CA10F52066D70100E72F94 /* Localization.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10F42066D70100E72F94 /* Localization.generated.swift */; };
+		08CA10F72066DBAB00E72F94 /* RoundedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10F62066DBAB00E72F94 /* RoundedButtonTests.swift */; };
 		3F29B5C958D1E11AED341CFF /* Pods_BPPMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4404DA452AD925423895FA4B /* Pods_BPPMobileTestTests.framework */; };
 		81B96C3771F1DA4E506A1E5E /* Pods_BPPMobileTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF6CAF66A4EE325374C4F59 /* Pods_BPPMobileTestUITests.framework */; };
 		BE84642C6BE762EAA5127442 /* Pods_BPPMobileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F5EF289AE93B3DDF390254 /* Pods_BPPMobileTest.framework */; };
@@ -62,9 +71,20 @@
 		08A441FB2065DB4E0092950C /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		08A441FD206683BE0092950C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		08CA10CD2066978100E72F94 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
-		08CA10D02066986900E72F94 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		08CA10D2206699D300E72F94 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		08CA10DA20669CBF00E72F94 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
+		08CA10DE20669EA800E72F94 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		08CA10E02066BE6A00E72F94 /* ErrorMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageView.swift; sourceTree = "<group>"; };
+		08CA10E22066C4E300E72F94 /* UIView+Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadows.swift"; sourceTree = "<group>"; };
+		08CA10E42066C61500E72F94 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		08CA10E62066C9D000E72F94 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		08CA10E82066CC9100E72F94 /* LoginDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDependencies.swift; sourceTree = "<group>"; };
+		08CA10EA2066D3AD00E72F94 /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
+		08CA10EC2066D59200E72F94 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		08CA10F12066D5DE00E72F94 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		08CA10F32066D68300E72F94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		08CA10F42066D70100E72F94 /* Localization.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.generated.swift; sourceTree = "<group>"; };
+		08CA10F62066DBAB00E72F94 /* RoundedButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonTests.swift; sourceTree = "<group>"; };
 		14F5EF289AE93B3DDF390254 /* Pods_BPPMobileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BPPMobileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBF3AAC8677F92701E0DB12 /* Pods-BPPMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPPMobileTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BPPMobileTestTests/Pods-BPPMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3ADBDF6DD7690CEBBEC2D8B8 /* Pods-BPPMobileTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPPMobileTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BPPMobileTest/Pods-BPPMobileTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +148,7 @@
 		08A441BB2065D09E0092950C /* BPPMobileTest */ = {
 			isa = PBXGroup;
 			children = (
+				08CA10DD20669E9E00E72F94 /* Protocols */,
 				08A441EF2065D1E60092950C /* Components */,
 				08CA10CC2066976F00E72F94 /* Extensions */,
 				08A441EA2065D1050092950C /* Resources */,
@@ -140,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				08A441D12065D09E0092950C /* BPPMobileTestTests.swift */,
+				08CA10F62066DBAB00E72F94 /* RoundedButtonTests.swift */,
 				08A441D32065D09E0092950C /* Info.plist */,
 			);
 			path = BPPMobileTestTests;
@@ -160,6 +182,7 @@
 				08A441EB2065D1B90092950C /* Assets */,
 				08CA10D720669B1100E72F94 /* Generated */,
 				08A441EC2065D1BF0092950C /* LaunchScreen */,
+				08CA10ED2066D5A400E72F94 /* Localization */,
 				08A441ED2065D1C80092950C /* SupportingFiles */,
 			);
 			path = Resources;
@@ -221,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				08CA10C72066894000E72F94 /* Views */,
+				08CA10E82066CC9100E72F94 /* LoginDependencies.swift */,
+				08CA10EA2066D3AD00E72F94 /* LoginError.swift */,
 				08A441F22065D81A0092950C /* LoginViewController.swift */,
 				08A441F32065D81A0092950C /* LoginViewController.xib */,
 			);
@@ -231,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				08A441FD206683BE0092950C /* RoundedButton.swift */,
+				08CA10E02066BE6A00E72F94 /* ErrorMessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,7 +264,9 @@
 		08CA10CC2066976F00E72F94 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				08CA10E42066C61500E72F94 /* UIView+Constraints.swift */,
 				08CA10CD2066978100E72F94 /* UIView+Gradient.swift */,
+				08CA10E22066C4E300E72F94 /* UIView+Shadows.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,7 +274,7 @@
 		08CA10CF2066985900E72F94 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				08CA10D02066986900E72F94 /* Theme.swift */,
+				08CA10E62066C9D000E72F94 /* Colors.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -255,8 +283,25 @@
 			isa = PBXGroup;
 			children = (
 				08CA10DA20669CBF00E72F94 /* Assets.generated.swift */,
+				08CA10F42066D70100E72F94 /* Localization.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		08CA10DD20669E9E00E72F94 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				08CA10DE20669EA800E72F94 /* ViewState.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		08CA10ED2066D5A400E72F94 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				08CA10F22066D5DE00E72F94 /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		187BA3DDD51F9034C1C768E4 /* Pods */ = {
@@ -400,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08CA10F02066D5DE00E72F94 /* Localizable.strings in Resources */,
 				08A441C72065D09E0092950C /* LaunchScreen.storyboard in Resources */,
 				08CA10D3206699D300E72F94 /* Colors.xcassets in Resources */,
 				08A441C42065D09E0092950C /* Assets.xcassets in Resources */,
@@ -450,7 +496,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen";
+			shellScript = $PODS_ROOT/SwiftGen/bin/swiftgen;
 		};
 		33E50EF8BD595BB6BE27775E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -607,10 +653,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				08CA10CE2066978100E72F94 /* UIView+Gradient.swift in Sources */,
-				08CA10D12066986900E72F94 /* Theme.swift in Sources */,
+				08CA10E12066BE6A00E72F94 /* ErrorMessageView.swift in Sources */,
+				08CA10E52066C61500E72F94 /* UIView+Constraints.swift in Sources */,
 				08A441FC2065DB4E0092950C /* AppDependencies.swift in Sources */,
 				08A441FE206683BE0092950C /* RoundedButton.swift in Sources */,
+				08CA10E32066C4E300E72F94 /* UIView+Shadows.swift in Sources */,
+				08CA10EB2066D3AD00E72F94 /* LoginError.swift in Sources */,
+				08CA10E92066CC9100E72F94 /* LoginDependencies.swift in Sources */,
 				08A441F92065D8640092950C /* AppCoordinator.swift in Sources */,
+				08CA10E72066C9D000E72F94 /* Colors.swift in Sources */,
+				08CA10DF20669EA800E72F94 /* ViewState.swift in Sources */,
+				08CA10F52066D70100E72F94 /* Localization.generated.swift in Sources */,
 				08A441F42065D81A0092950C /* LoginViewController.swift in Sources */,
 				08A441BD2065D09E0092950C /* AppDelegate.swift in Sources */,
 				08CA10DB20669CBF00E72F94 /* Assets.generated.swift in Sources */,
@@ -622,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08A441D22065D09E0092950C /* BPPMobileTestTests.swift in Sources */,
+				08CA10F72066DBAB00E72F94 /* RoundedButtonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,9 +707,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				08A441C62065D09E0092950C /* Base */,
+				08CA10EC2066D59200E72F94 /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
 			path = .;
+			sourceTree = "<group>";
+		};
+		08CA10F22066D5DE00E72F94 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				08CA10F12066D5DE00E72F94 /* pt-BR */,
+				08CA10F32066D68300E72F94 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -665,6 +729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -722,6 +787,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

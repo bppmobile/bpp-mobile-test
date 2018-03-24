@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="BPPMobileTest" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="bqr-Df-YeX" id="ybh-gh-hgj"/>
+                <outlet property="errorMessageView" destination="OjN-gC-xhA" id="oG7-1s-ukW"/>
                 <outlet property="fieldsContainerView" destination="2Lr-Mi-7RN" id="5zk-pC-Iow"/>
                 <outlet property="loginButton" destination="WJ4-GU-Cdb" id="YIQ-eg-wLX"/>
                 <outlet property="passwordTextField" destination="Bde-6j-Iyg" id="p5v-64-mLf"/>
@@ -105,18 +107,38 @@
                         <action selector="loginButtonTouchedUpInside:" destination="-1" eventType="touchUpInside" id="lmL-lM-sEh"/>
                     </connections>
                 </button>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OjN-gC-xhA" customClass="ErrorMessageView" customModule="BPPMobileTest" customModuleProvider="target">
+                    <rect key="frame" x="40" y="50" width="295" height="40"/>
+                    <color key="backgroundColor" name="PastelRed"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="r80-OF-wmw"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.12941176470588234" green="0.57647058823529407" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Lr-Mi-7RN" secondAttribute="trailing" constant="40" id="1w0-Ij-Wn8"/>
+                <constraint firstItem="OjN-gC-xhA" firstAttribute="trailing" secondItem="2Lr-Mi-7RN" secondAttribute="trailing" id="6GH-MQ-jnv"/>
                 <constraint firstItem="WJ4-GU-Cdb" firstAttribute="trailing" secondItem="2Lr-Mi-7RN" secondAttribute="trailing" id="OQG-90-MBb"/>
                 <constraint firstItem="WJ4-GU-Cdb" firstAttribute="top" secondItem="2Lr-Mi-7RN" secondAttribute="bottom" constant="40" id="ZJb-Qm-rek"/>
                 <constraint firstItem="2Lr-Mi-7RN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="a3S-2I-OFt"/>
                 <constraint firstItem="WJ4-GU-Cdb" firstAttribute="leading" secondItem="2Lr-Mi-7RN" secondAttribute="leading" id="eQc-Ld-qXr"/>
                 <constraint firstItem="2Lr-Mi-7RN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="90" id="lcj-3m-GQT"/>
+                <constraint firstItem="2Lr-Mi-7RN" firstAttribute="top" secondItem="OjN-gC-xhA" secondAttribute="bottom" constant="20" id="oPV-L7-5hM"/>
+                <constraint firstItem="OjN-gC-xhA" firstAttribute="leading" secondItem="2Lr-Mi-7RN" secondAttribute="leading" id="z8h-Lj-9fD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="PastelRed">
+            <color red="1" green="0.41100001335144043" blue="0.34799998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

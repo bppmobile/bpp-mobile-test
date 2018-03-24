@@ -56,11 +56,13 @@ enum Resources {
     static let allValues: [ResourcesType] = allImages
   }
   enum Colors {
+    static let pastelRed = ColorAsset(name: "PastelRed")
     static let pelorous = ColorAsset(name: "Pelorous")
     static let skyBlue = ColorAsset(name: "SkyBlue")
 
     // swiftlint:disable trailing_comma
     static let allColors: [ColorAsset] = [
+      pastelRed,
       pelorous,
       skyBlue,
     ]

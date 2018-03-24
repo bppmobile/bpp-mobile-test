@@ -12,6 +12,7 @@ final class AppCoordinator {
     init(dependencies: AppDependencies) {
         self.dependencies = dependencies
         self.loginViewController = LoginViewController()
+        self.loginViewController.dependencies = LoginDependencies.make(from: dependencies)
     }
     
     // MARK: Private properties
