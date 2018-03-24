@@ -8,6 +8,9 @@ use_frameworks!
 def common
     # Static analysis
     pod 'SwiftLint'
+
+    # Code generation
+    pod 'SwiftGen'
 end
 
 target 'BPPMobileTest' do

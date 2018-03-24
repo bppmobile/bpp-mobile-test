@@ -10,8 +10,13 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setAppearance()
+        setSubviews()
         observeNotifications()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setAppearance()
     }
     
     // MARK: IBOutlets
@@ -23,9 +28,13 @@ final class LoginViewController: UIViewController {
     
     // MARK: Private methods
     
+    private func setSubviews() {
+        loginButton.isEnabled = false
+    }
+    
     private func setAppearance() {
         fieldsContainerView.layer.cornerRadius = 8
-        loginButton.isEnabled = false
+        view.setLinearGradient(withColors: Colors.background.gradientColors, axis: .vertical)
     }
     
     private func observeNotifications() {

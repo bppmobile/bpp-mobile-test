@@ -1,0 +1,10 @@
+input_dir: BPPMobileTest/Resources/
+output_dir: BPPMobileTest/Resources/Generated/
+xcassets:
+  - paths: 
+      - Assets/Assets.xcassets
+      - Assets/Colors.xcassets
+    output: Assets.generated.swift
+    templateName: swift4
+    params:
+      enumName: Resources

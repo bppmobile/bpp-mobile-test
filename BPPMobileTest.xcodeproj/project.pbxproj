@@ -17,6 +17,10 @@
 		08A441F92065D8640092950C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441F82065D8640092950C /* AppCoordinator.swift */; };
 		08A441FC2065DB4E0092950C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441FB2065DB4E0092950C /* AppDependencies.swift */; };
 		08A441FE206683BE0092950C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A441FD206683BE0092950C /* RoundedButton.swift */; };
+		08CA10CE2066978100E72F94 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10CD2066978100E72F94 /* UIView+Gradient.swift */; };
+		08CA10D12066986900E72F94 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10D02066986900E72F94 /* Theme.swift */; };
+		08CA10D3206699D300E72F94 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08CA10D2206699D300E72F94 /* Colors.xcassets */; };
+		08CA10DB20669CBF00E72F94 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08CA10DA20669CBF00E72F94 /* Assets.generated.swift */; };
 		3F29B5C958D1E11AED341CFF /* Pods_BPPMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4404DA452AD925423895FA4B /* Pods_BPPMobileTestTests.framework */; };
 		81B96C3771F1DA4E506A1E5E /* Pods_BPPMobileTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF6CAF66A4EE325374C4F59 /* Pods_BPPMobileTestUITests.framework */; };
 		BE84642C6BE762EAA5127442 /* Pods_BPPMobileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F5EF289AE93B3DDF390254 /* Pods_BPPMobileTest.framework */; };
@@ -57,6 +61,10 @@
 		08A441F82065D8640092950C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		08A441FB2065DB4E0092950C /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		08A441FD206683BE0092950C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		08CA10CD2066978100E72F94 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		08CA10D02066986900E72F94 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		08CA10D2206699D300E72F94 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		08CA10DA20669CBF00E72F94 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
 		14F5EF289AE93B3DDF390254 /* Pods_BPPMobileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BPPMobileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBF3AAC8677F92701E0DB12 /* Pods-BPPMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPPMobileTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BPPMobileTestTests/Pods-BPPMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		3ADBDF6DD7690CEBBEC2D8B8 /* Pods-BPPMobileTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPPMobileTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BPPMobileTest/Pods-BPPMobileTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				08A441EF2065D1E60092950C /* Components */,
+				08CA10CC2066976F00E72F94 /* Extensions */,
 				08A441EA2065D1050092950C /* Resources */,
 				08A441F12065D7FA0092950C /* Scenes */,
 			);
@@ -149,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				08A441EB2065D1B90092950C /* Assets */,
+				08CA10D720669B1100E72F94 /* Generated */,
 				08A441EC2065D1BF0092950C /* LaunchScreen */,
 				08A441ED2065D1C80092950C /* SupportingFiles */,
 			);
@@ -159,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				08A441C32065D09E0092950C /* Assets.xcassets */,
+				08CA10D2206699D300E72F94 /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				08A441EE2065D1E00092950C /* Application */,
+				08CA10CF2066985900E72F94 /* Theme */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -221,6 +233,30 @@
 				08A441FD206683BE0092950C /* RoundedButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		08CA10CC2066976F00E72F94 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08CA10CD2066978100E72F94 /* UIView+Gradient.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08CA10CF2066985900E72F94 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				08CA10D02066986900E72F94 /* Theme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		08CA10D720669B1100E72F94 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				08CA10DA20669CBF00E72F94 /* Assets.generated.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		187BA3DDD51F9034C1C768E4 /* Pods */ = {
@@ -255,6 +291,7 @@
 			buildPhases = (
 				3613FCD57A1C9AFB35F85E3A /* [CP] Check Pods Manifest.lock */,
 				08A441F02065D6A10092950C /* SwiftLint */,
+				08CA10D420669ABD00E72F94 /* SwiftGen */,
 				08A441B52065D09E0092950C /* Sources */,
 				08A441B62065D09E0092950C /* Frameworks */,
 				08A441B72065D09E0092950C /* Resources */,
@@ -364,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08A441C72065D09E0092950C /* LaunchScreen.storyboard in Resources */,
+				08CA10D3206699D300E72F94 /* Colors.xcassets in Resources */,
 				08A441C42065D09E0092950C /* Assets.xcassets in Resources */,
 				08A441F52065D81A0092950C /* LoginViewController.xib in Resources */,
 			);
@@ -399,6 +437,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint --config $PROJECT_DIR/.swiftlint.yml";
+		};
+		08CA10D420669ABD00E72F94 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen";
 		};
 		33E50EF8BD595BB6BE27775E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -554,11 +606,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08CA10CE2066978100E72F94 /* UIView+Gradient.swift in Sources */,
+				08CA10D12066986900E72F94 /* Theme.swift in Sources */,
 				08A441FC2065DB4E0092950C /* AppDependencies.swift in Sources */,
 				08A441FE206683BE0092950C /* RoundedButton.swift in Sources */,
 				08A441F92065D8640092950C /* AppCoordinator.swift in Sources */,
 				08A441F42065D81A0092950C /* LoginViewController.swift in Sources */,
 				08A441BD2065D09E0092950C /* AppDelegate.swift in Sources */,
+				08CA10DB20669CBF00E72F94 /* Assets.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

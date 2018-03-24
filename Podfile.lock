@@ -1,15 +1,18 @@
 PODS:
   - Reveal-SDK (13)
+  - SwiftGen (5.2.1)
   - SwiftLint (0.25.0)
 
 DEPENDENCIES:
   - Reveal-SDK
+  - SwiftGen
   - SwiftLint
 
 SPEC CHECKSUMS:
   Reveal-SDK: ccc2b0f8014965ea448b7534a7c2c8da232b75e8
+  SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
 
-PODFILE CHECKSUM: bc19284a46d6cea7160693c17ab63e88fb46a808
+PODFILE CHECKSUM: f31eec52b4600cba17ea1de2b8b3bbc106a4d85c
 
 COCOAPODS: 1.4.0
