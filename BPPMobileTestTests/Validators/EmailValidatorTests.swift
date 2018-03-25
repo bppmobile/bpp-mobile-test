@@ -1,5 +1,5 @@
-@testable import BPPMobileTest
 import XCTest
+@testable import BPPMobileTest
 
 final class EmailValidatorTests: XCTestCase {
     

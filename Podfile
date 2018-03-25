@@ -22,6 +22,9 @@ end
 
 target 'BPPMobileTestTests' do
   common
+
+  # Network stubs
+  pod 'OHHTTPStubs/Swift'
 end
 
 target 'BPPMobileTestUITests' do

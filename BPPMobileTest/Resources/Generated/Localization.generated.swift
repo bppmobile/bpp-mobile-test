@@ -11,10 +11,14 @@ enum Localization {
   static let loginButtonTitle = Localization.tr("Localizable", "login_button_title")
   /// E-mail
   static let loginEmailTextfieldPlaceholder = Localization.tr("Localizable", "login_email_textfield_placeholder")
+  /// Os campos de e-mail e senham precisam ser preenchidos
+  static let loginErrorEmptyEmailOrPassword = Localization.tr("Localizable", "login_error_empty_email_or_password")
   /// E-mail e/ou senha inválidos
   static let loginErrorInvalidEmailOrPasswordMessage = Localization.tr("Localizable", "login_error_invalid_email_or_password_message")
   /// E-mail em formato inválido
   static let loginErrorInvalidFormattedEmail = Localization.tr("Localizable", "login_error_invalid_formatted_email")
+  /// Um erro desconhecido aconteceu
+  static let loginErrorUnableToEncodePasswordToBase64 = Localization.tr("Localizable", "login_error_unable_to_encode_password_to_base_64")
   /// Senha
   static let loginPasswordTextfieldPlaceholder = Localization.tr("Localizable", "login_password_textfield_placeholder")
 }

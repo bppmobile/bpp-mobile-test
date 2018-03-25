@@ -33,6 +33,11 @@ final class LoginViewController: UIViewController, HasViewState {
         setAppearance()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel.cancelRequest()
+    }
+    
     // MARK: IBOutlets
 
     @IBOutlet private weak var errorMessageView: ErrorMessageView!
@@ -47,8 +52,8 @@ final class LoginViewController: UIViewController, HasViewState {
         return dependencies.colorTheme
     }
     
-    private var emailValidator: EmailValidator {
-        return dependencies.emailValidator
+    private var viewModel: LoginViewModel {
+        return dependencies.loginViewModel
     }
     
     private let cornerRadius: CGFloat = 8
@@ -87,23 +92,35 @@ final class LoginViewController: UIViewController, HasViewState {
     }
     
     private func attemptToLogUserIn() {
-        if areBothFieldsValid() {
-            viewState = .isLoading
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            let error = LoginError.emptyEmailOrPassword
+            viewState = .hasError(error)
+            return
         }
-    }
-    
-    private func areBothFieldsValid() -> Bool {
-        guard let email = emailTextField.text, emailValidator.isEmailValid(email) else {
+        
+        guard viewModel.isEmailValid(email) else {
             let error = LoginError.invalidFormattedEmail
             viewState = .hasError(error)
-            return false
+            return
         }
         
-        guard let password = passwordTextField.text, !password.isEmpty else {
-            return false
+        guard viewModel.isPasswordValid(password) else {
+            let error = LoginError.emptyEmailOrPassword
+            viewState = .hasError(error)
+            return
         }
         
-        return true
+        viewState = .isLoading
+        
+        viewModel.login(withEmail: email, password: password) { [weak self] result in
+            switch result {
+            case .success:
+                self?.viewState = .idle
+                
+            case .failure(let error):
+                self?.viewState = .hasError(error)
+            }
+        }
     }
 }
 
@@ -115,27 +132,16 @@ private extension LoginViewController {
         case .idle:
             loginButton.viewState = .idle
             errorMessageView.fadeOut()
-            hideNetworkActivityIndicator()
             
         case .isLoading:
             loginButton.viewState = .isLoading
             errorMessageView.fadeOut()
-            showNetworkActivityIndicator()
             
         case .hasError(let error):
             loginButton.viewState = .hasError(error)
             errorMessageView.text = error.asLoginError?.localizedDescription
             errorMessageView.fadeIn()
-            hideNetworkActivityIndicator()
         }
-    }
-    
-    private func showNetworkActivityIndicator() {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    }
-    
-    private func hideNetworkActivityIndicator() {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
 

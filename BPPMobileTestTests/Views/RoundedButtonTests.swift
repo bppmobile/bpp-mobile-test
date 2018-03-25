@@ -1,5 +1,5 @@
-@testable import BPPMobileTest
 import XCTest
+@testable import BPPMobileTest
 
 final class RoundedButtonTests: XCTestCase {
     
@@ -14,7 +14,7 @@ final class RoundedButtonTests: XCTestCase {
         XCTAssertFalse(button.isUserInteractionEnabled)
         
         button.viewState = .idle
-        XCTAssert(button.title(for: .normal) == title)
+        XCTAssertEqual(button.title(for: .normal), title)
         XCTAssertTrue(button.isUserInteractionEnabled)
     }
     
@@ -31,7 +31,7 @@ final class RoundedButtonTests: XCTestCase {
         let error = LoginError.invalidEmailOrPassword
         
         button.viewState = .hasError(error)
-        XCTAssert(button.title(for: .normal) == title)
+        XCTAssertEqual(button.title(for: .normal), title)
         XCTAssertTrue(button.isUserInteractionEnabled)
     }
     
@@ -44,7 +44,7 @@ final class RoundedButtonTests: XCTestCase {
         let error = LoginError.invalidEmailOrPassword
         
         button.viewState = .hasError(error)
-        XCTAssert(button.title(for: .normal) == title)
+        XCTAssertEqual(button.title(for: .normal), title)
         XCTAssertTrue(button.isUserInteractionEnabled)
         
         button.viewState = .isLoading
