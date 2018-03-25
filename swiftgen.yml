@@ -1,0 +1,16 @@
+input_dir: BPPMobileTest/Resources/
+output_dir: BPPMobileTest/Resources/Generated/
+strings:
+  paths: Localization/pt-BR.lproj/Localizable.strings
+  output: Localization.generated.swift
+  templateName: structured-swift4
+  params:
+    enumName: Localization
+xcassets:
+  - paths: 
+      - Assets/Assets.xcassets
+      - Assets/Colors.xcassets
+    output: Assets.generated.swift
+    templateName: swift4
+    params:
+      enumName: Resources
